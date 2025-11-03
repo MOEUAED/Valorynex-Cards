@@ -13,7 +13,6 @@ Elle permet de **créer, réviser et tester ses connaissances** de manière simp
 - [📘 Exemple de fichier JSON](#-exemple-de-fichier-json)
 - [🧠 Technologies utilisées](#-technologies-utilisées)
 - [👤 Auteur](#-auteur)
-- [💡 Améliorations futures](#-améliorations-futures)
 
 ---
 
@@ -53,6 +52,7 @@ Elle permet de **créer, réviser et tester ses connaissances** de manière simp
 ---
 
 ## 🗂️ Structure du projet
+```text
 Valorynex-Cards/
 │
 ├── index.html # Page d’accueil (landing page) 
@@ -70,7 +70,7 @@ Valorynex-Cards/
 │ │ └── quiz.html # Page de quiz
 |
 └── README.md
-
+```
 ## Installer Tailwind CSS (si tu veux modifier le style)
 
 npm install
@@ -86,6 +86,7 @@ Ou déploie le projet sur GitHub Pages, Netlify ou Vercel.
 
 Fichier : assets/data/quizzes.json
 
+```json
 [
   {
     "id": "quiz-html",
@@ -110,6 +111,7 @@ Fichier : assets/data/quizzes.json
     ]
   }
 ]
+```
 
 ## 🧠 Technologies utilisées
 
