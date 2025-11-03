@@ -130,8 +130,8 @@ Fichier : assets/data/quizzes.json
 
 ## 👤 Auteur
 
-#👨‍💻 Mouad Ziyani
--Projet : Valorynex-Cards
--📅 Début : 03/11/2025
--🕔 Date limite : 14/11/2025 - 17h00
--📍 Réalisé dans le cadre d’un projet de développement web.
+# 👨‍💻 Mouad Ziyani
+- Projet : Valorynex-Cards
+- 📅 Début : 03/11/2025
+- 🕔 Date limite : 14/11/2025 - 17h00
+- 📍 Réalisé dans le cadre d’un projet de développement web.
