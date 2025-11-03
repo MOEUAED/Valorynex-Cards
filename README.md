@@ -118,20 +118,20 @@ Fichier : assets/data/quizzes.json
 # Technologie	Rôle
 
 # HTML5	
-  Structure des pages
+-  Structure des pages
 # CSS3 / Tailwind CSS	
-  Style et mise en page responsive
+-  Style et mise en page responsive
 # JavaScript (Vanilla)	
-  Logique de gestion (flashcards + quiz)
+-  Logique de gestion (flashcards + quiz)
 # LocalStorage	
-  Sauvegarde locale des données
+-  Sauvegarde locale des données
 # JSON	
-  Format des données des quiz
+-  Format des données des quiz
 
 ## 👤 Auteur
 
-👨‍💻 Mouad Ziyani
-Projet : Valorynex-Cards
-📅 Début : 03/11/2025
-🕔 Date limite : 14/11/2025 - 17h00
-📍 Réalisé dans le cadre d’un projet de développement web.
+#👨‍💻 Mouad Ziyani
+-Projet : Valorynex-Cards
+-📅 Début : 03/11/2025
+-🕔 Date limite : 14/11/2025 - 17h00
+-📍 Réalisé dans le cadre d’un projet de développement web.
