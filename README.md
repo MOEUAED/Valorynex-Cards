@@ -53,4 +53,83 @@ Elle permet de **créer, réviser et tester ses connaissances** de manière simp
 ---
 
 ## 🗂️ Structure du projet
+Valorynex-Cards/
+│
+├── index.html # Page d’accueil (landing page) 
+│
+├── /assets
+│ ├── /src
+│ │ └── output.css # Fichier CSS généré par Tailwind
+│ ├── /js
+│ │ ├── flashcards.js # Logique JS pour les flashcards
+│ │ └── quiz.js # Logique JS pour les quiz
+│ └── /data
+│ └── quizzes.json # Données des quiz
+│ ├── /html
+│ │ └── flashcards.html # Page de création et gestion des flashcards
+│ │ └── quiz.html # Page de quiz
+|
+└── README.md
 
+## Installer Tailwind CSS (si tu veux modifier le style)
+
+npm install
+npx tailwindcss -i ./assets/src/input.css -o ./assets/src/output.css --watch
+
+## Lancer le projet
+
+Ouvre le fichier index.html avec un serveur local (ex : Live Server sur VS Code).
+
+Ou déploie le projet sur GitHub Pages, Netlify ou Vercel.
+
+## 📘 Exemple de fichier JSON
+
+Fichier : assets/data/quizzes.json
+
+[
+  {
+    "id": "quiz-html",
+    "collectionId": "html-basics",
+    "title": "Quiz HTML - niveau débutant",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "text",
+        "question": "Que signifie HTML ?",
+        "acceptedAnswers": [
+          "Hyper Text Markup Language",
+          "Hypertext Markup Language"
+        ]
+      },
+      {
+        "id": "q2",
+        "type": "true_false",
+        "question": "La balise <div> est sémantique.",
+        "correct": false
+      }
+    ]
+  }
+]
+
+## 🧠 Technologies utilisées
+
+# Technologie	Rôle
+
+# HTML5	
+  Structure des pages
+# CSS3 / Tailwind CSS	
+  Style et mise en page responsive
+# JavaScript (Vanilla)	
+  Logique de gestion (flashcards + quiz)
+# LocalStorage	
+  Sauvegarde locale des données
+# JSON	
+  Format des données des quiz
+
+## 👤 Auteur
+
+👨‍💻 Mouad Ziyani
+Projet : Valorynex-Cards
+📅 Début : 03/11/2025
+🕔 Date limite : 14/11/2025 - 17h00
+📍 Réalisé dans le cadre d’un projet de développement web.
