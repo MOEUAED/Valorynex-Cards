@@ -1,0 +1,19 @@
+  {
+    "id": "q1",
+    "collectionId": "html-basics",
+    "title": "Quiz HTML - niveau 1",
+    "questions": [
+      {
+        "id": "q1-1",
+        "type": "text",
+        "question": "Que signifie HTML ?",
+        "acceptedAnswers": ["Hyper Text Markup Language", "Hypertext Markup Language"]
+      },
+      {
+        "id": "q1-2",
+        "type": "true_false",
+        "question": "La balise <div> est sémantique.",
+        "correct": false
+      }
+    ]
+  }
