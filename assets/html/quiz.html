@@ -3,13 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/src/output.css">
+  <link rel="stylesheet" href="../src/output.css">
   <title>Valorynex-Cards - Quiz</title>
 </head>
-<body class="bg-gray-50 font-sans">
-    <h1 class="text-5xl font-extrabold text-indigo-700 mb-6">
-      Valorynex-Cards 🎓
-    </h1>
+<body class="min-h-screen text-[#f5f5f5]">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center px-8 py-4 bg-[#2c2c2c] shadow-md">
+    <a href="../../index.html" class="text-xl font-bold flex items-center gap-2 text-[#c49b63]">
+      <span class="bg-[#c49b63] text-[#1f1f1f] p-2 rounded-lg">🎓</span>
+      Valorynex-Cards
+    </a>
+    <nav>
+      <ul class="flex gap-6 text-[#f5f5f5] font-medium">
+        <li><a href="flashcards.html" class="rounded-2xl py-2 px-4 bg-[#3a3a3a] font-semibold hover:bg-[#c49b63] hover:text-[#1f1f1f] transition">Flashcards</a></li>
+        <li><a href="quiz.html" class="rounded-2xl py-2 px-4 bg-[#3a3a3a] font-semibold hover:bg-[#c49b63] hover:text-[#1f1f1f] transition">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="flex flex-col items-center text-center px-6 py-16">
+
+    <h1 class="text-4xl font-extrabold text-[#c49b63] mb-10">Mes Flashcards</h1>
+
+    <!-- Create collection + Add card -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-5xl mb-16">
+      <!-- Create collection -->
+      <div class="bg-[#2c2c2c] p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#c49b63] text-[#1f1f1f] text-3xl">+</div>
+          <h3 class="text-lg font-semibold text-[#e0b77c]">Créer une collection</h3>
+        </div>
+        <form id="collectionForm" class="flex flex-col gap-4">
+          <input id="collectionTitle" type="text" placeholder="Ex : HTML Basics"
+            class="bg-[#3a3a3a] border border-[#3a3a3a] rounded-lg px-4 py-2 text-[#f5f5f5] placeholder-[#d1d1d1] outline-none focus:ring-2 focus:ring-[#c49b63]">
+          <button type="submit" class="px-5 py-2 rounded-lg bg-[#c49b63] text-[#1f1f1f] font-semibold hover:bg-[#e0b77c] transition">
+            Créer la collection
+          </button>
+        </form>
+      </div>
+
+      <!-- Add card -->
+      <div class="bg-[#2c2c2c] p-8 rounded-2xl shadow-md hover:shadow-xl transition">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#c49b63] text-[#1f1f1f] text-3xl">+</div>
+          <h3 class="text-lg font-semibold text-[#e0b77c]">Ajouter une carte</h3>
+        </div>
+        <form id="cardForm" class="flex flex-col gap-4">
+          <select id="collectionSelect"
+            class="bg-[#3a3a3a] border border-[#3a3a3a] rounded-lg px-4 py-2 text-[#f5f5f5] outline-none">
+            <option value="">-- Choisir une collection --</option>
+          </select>
+          <input id="questionInput" type="text" placeholder="Question : Ex : Quelle balise pour un paragraphe ?"
+            class="bg-[#3a3a3a] border border-[#3a3a3a] rounded-lg px-4 py-2 text-[#f5f5f5] placeholder-[#d1d1d1] outline-none focus:ring-2 focus:ring-[#c49b63]">
+          <input id="answerInput" type="text" placeholder="Réponse : Ex : <p>"
+            class="bg-[#3a3a3a] border border-[#3a3a3a] rounded-lg px-4 py-2 text-[#f5f5f5] placeholder-[#d1d1d1] outline-none focus:ring-2 focus:ring-[#c49b63]">
+          <button type="submit" class="px-5 py-2 rounded-lg bg-[#c49b63] text-[#1f1f1f] font-semibold hover:bg-[#e0b77c] transition">
+            Ajouter la carte
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
 
 </body>
 </html>
