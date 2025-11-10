@@ -6,30 +6,31 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Valorynex-Cards - Accueil</title>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-white font-sans">
+<body class="min-h-screen bg-[#1f1f1f] font-sans text-[#f5f5f5]">
 
   <!-- Header -->
-  <header class="flex justify-between items-center px-8 py-4 bg-white shadow-sm">
-      <a href="index.html" class="text-xl font-bold text-purple-600 flex items-center gap-2">
-        <span class="bg-purple-600 text-white p-2 rounded-lg">
+  <header class="flex justify-between items-center px-8 py-4 bg-[#2c2c2c] shadow-md">
+      <a href="index.html" class="text-xl font-bold text-[#c49b63] flex items-center gap-2">
+        <span class="bg-[#c49b63] text-[#1f1f1f] p-2 rounded-lg">
           🎓
         </span>
         Valorynex-Cards
       </a>
     <nav>
-      <ul class="flex gap-6 text-gray-700 font-medium">
-        <li><a href="assets/html/flashcards.html" class="rounded-2xl py-2 px-4 hover:text-purple-600 hover:bg-gradient-to-br hover:from-purple-300 hover:to-pink-500  bg-gradient-to-r  from-blue-500 to-purple-500 text-white ">Flashcards</a></li>
-        <li><a href="assets/html/quiz.html" class="rounded-2xl py-2 px-4 hover:text-purple-600 hover:bg-gradient-to-br hover:from-purple-300 hover:to-pink-500  bg-gradient-to-r  from-blue-500 to-purple-500 text-white ">Quiz</a></li>
+      <ul class="flex gap-6 text-[#f5f5f5] font-medium">
+        <li><a href="assets/html/flashcards.html" class="rounded-2xl py-2 px-4 bg-[#3a3a3a] hover:bg-[#c49b63] hover:text-[#1f1f1f] transition">Flashcards</a></li>
+        <li><a href="assets/html/quiz.html" class="rounded-2xl py-2 px-4 bg-[#3a3a3a] hover:bg-[#c49b63] hover:text-[#1f1f1f] transition">Quiz</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Main Section -->
   <main class="flex flex-col items-center justify-center text-center px-6 py-16">
-    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-4">
+
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-[#c49b63] mb-4">
       Valorynex-Cards 🎓
     </h2>
-    <p class="max-w-2xl text-gray-600 text-lg mb-12">
+    <p class="max-w-2xl text-[#d1d1d1] text-lg mb-12">
       Bienvenue sur <strong>Valorynex-Cards</strong>, votre espace d’apprentissage interactif !<br><br>
       Créez vos propres <strong>flashcards</strong>, révisez efficacement vos notions et testez vos connaissances grâce à des <strong>quiz amusants</strong>.
     </p>
@@ -38,56 +39,70 @@
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full max-w-5xl mb-16">
 
       <!-- Flashcards -->
-      <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center hover:shadow-2xl hover:scale-105 transition-transform hover:border hover:border-purple-700">
-        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 mb-4 text-white text-3xl">
+      <div class="bg-[#2c2c2c] rounded-2xl shadow-md p-8 flex flex-col items-center hover:shadow-2xl hover:scale-105 transition-transform hover:border hover:border-[#c49b63]">
+        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#c49b63] to-[#e0b77c] mb-4 text-[#1f1f1f] text-3xl">
           📖
         </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Flashcards</h3>
-        <p class="text-gray-500 mb-6 text-sm">Créez et révisez vos cartes de révision personnalisées</p>
-        <a href="assets/html/flashcards.html" class="px-5 py-2 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium shadow hover:opacity-90 transition">
+        <h3 class="text-xl font-semibold text-[#f5f5f5] mb-2">Flashcards</h3>
+        <p class="text-[#d1d1d1] mb-6 text-sm">Créez et révisez vos cartes de révision personnalisées</p>
+        <a href="assets/html/flashcards.html" class="px-5 py-2 rounded-lg bg-gradient-to-r from-[#c49b63] to-[#e0b77c] text-[#1f1f1f] font-medium shadow hover:opacity-90 transition">
           Accéder aux Flashcards
         </a>
       </div>
 
       <!-- Quiz -->
-      <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center hover:shadow-2xl hover:scale-105 transition-transform hover:border hover:border-purple-700 ">
-        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-4 text-white text-3xl">
+      <div class="bg-[#2c2c2c] rounded-2xl shadow-md p-8 flex flex-col items-center hover:shadow-2xl hover:scale-105 transition-transform hover:border hover:border-[#c49b63]">
+        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#c49b63] to-[#e0b77c] mb-4 text-[#1f1f1f] text-3xl">
           🧠
         </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Quiz</h3>
-        <p class="text-gray-500 mb-6 text-sm">Testez vos connaissances avec des quiz interactifs</p>
-        <a href="assets/html/quiz.html" class="px-5 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium shadow hover:opacity-90 transition">
+        <h3 class="text-xl font-semibold text-[#f5f5f5] mb-2">Quiz</h3>
+        <p class="text-[#d1d1d1] mb-6 text-sm">Testez vos connaissances avec des quiz interactifs</p>
+        <a href="assets/html/quiz.html" class="px-5 py-2 rounded-lg bg-gradient-to-r from-[#c49b63] to-[#e0b77c] text-[#1f1f1f] font-medium shadow hover:opacity-90 transition">
           Lancer un Quiz
         </a>
       </div>
 
       <!-- Progrès -->
-      <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center hover:shadow-2xl hover:scale-105 transition-transform hover:border hover:border-purple-700 ">
-        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-gradient-to-br from-pink-400 to-purple-500 mb-4 text-white text-3xl">
+      <div class="bg-[#2c2c2c] rounded-2xl shadow-md p-8 flex flex-col items-center hover:shadow-2xl hover:scale-105 transition-transform hover:border hover:border-[#c49b63]">
+        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#c49b63] to-[#e0b77c] mb-4 text-[#1f1f1f] text-3xl">
           📈
         </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Progrès</h3>
-        <p class="text-gray-500 mb-2 text-sm">Suivez votre apprentissage et vos scores</p>
-        <span id="quiz-count" class="text-purple-600 text-3xl font-bold">2</span>
-        <p class="text-sm text-gray-500">Collections disponibles</p>
+        <h3 class="text-xl font-semibold text-[#f5f5f5] mb-2">Progrès</h3>
+        <p class="text-[#d1d1d1] mb-2 text-sm">Suivez votre apprentissage et vos scores</p>
+        <span id="quiz-count" class="text-[#c49b63] text-3xl font-bold">2</span>
+        <p class="text-sm text-[#d1d1d1]">Collections disponibles</p>
       </div>
     </div>
 
     <!-- Bottom Box -->
-    <div class="bg-gradient-to-br from-purple-50 to-white border border-purple-100 rounded-2xl shadow-md p-10 w-full max-w-3xl hover:shadow-2xl hover:scale-105 transition-transform hover:border hover:border-purple-700 ">
-      <h3 class="text-2xl font-semibold text-gray-800 mb-3">Prêt à commencer ?</h3>
-      <p class="text-gray-600 mb-6">
+    <div class="bg-[#2c2c2c] border border-[#3a3a3a] rounded-2xl shadow-md p-10 w-full max-w-3xl hover:shadow-2xl hover:scale-105 transition-transform hover:border-[#c49b63]">
+      <h3 class="text-2xl font-semibold text-[#f5f5f5] mb-3">Prêt à commencer ?</h3>
+      <p class="text-[#d1d1d1] mb-6">
         Créez votre première collection de flashcards ou lancez un quiz pour tester vos connaissances.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="assets/html/flashcards.html" class="px-6 py-2 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium shadow hover:opacity-90 transition">
+        <a href="assets/html/flashcards.html" class="px-6 py-2 rounded-lg bg-gradient-to-r from-[#c49b63] to-[#e0b77c] text-[#1f1f1f] font-medium shadow hover:opacity-90 transition">
           Créer une collection
         </a>
-        <a href="assets/html/quiz.html" class="px-6 py-2 rounded-lg bg-gradient-to-r  from-blue-500 to-purple-500 border border-gray-300 text-white font-medium shadow hover:bg-gray-50 transition">
+        <a href="assets/html/quiz.html" class="px-6 py-2 rounded-lg bg-[#3a3a3a] border border-[#3a3a3a] text-[#f5f5f5] font-medium shadow hover:bg-[#2c2c2c] transition">
           Essayer un quiz
         </a>
       </div>
     </div>
   </main>
+  <script>
+  const quizCountEl = document.getElementById('quiz-count');
+
+  fetch('assets/data/collections.json')
+    .then(response => response.json())
+    .then(data => {
+      quizCountEl.textContent = data.length;
+    })
+    .catch(err => {
+      console.error('Failed to load collections:', err);
+      quizCountEl.textContent = 0;
+    });
+</script>
+
 </body>
 </html>
