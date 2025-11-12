@@ -9,56 +9,35 @@ const cardSection = document.getElementById('cardSection');
 const cardSectionTitle = document.getElementById('cardSectionTitle');
 const cardContainer = document.getElementById('cardContainer');
 const backButton = document.getElementById('backButton');
+const clearBtn = document.getElementById('clearStorageBtn');
 
-fetch('assets/data/collections.json')
-.then(response => response.json())
-.then(data => {
-    quizCountEl.textContent = data.length;
-    })
-    .catch(err => {
-        console.error('Failed to load collections:', err);
-        quizCountEl.textContent = 0;
-        });
-        
-        
-        
-
-let collections = {};
+let collections = {};   
 let currentIndex = 0;
 let currentCollection = null;
 
-// Load collections from JSON + localStorage
-async function loadCollections() {
-  try {
-    // Fetch initial collections from JSON
-    const res = await fetch('assets/data/collections.json');
-    const initialData = await res.json();
+function loadCollections() {
+  const saved = JSON.parse(localStorage.getItem('cards_collections')) || [];
 
-    // Load saved collections from localStorage
-    const savedData = JSON.parse(localStorage.getItem('cards_collections')) || [];
+  collections = {};
+  saved.forEach(c => {
+    collections[c.title] = c.cards || [];
+  });
 
-    // Merge JSON + localStorage
-    collections = {};
-    [...initialData, ...savedData].forEach(c => {
-      collections[c.title] = c.cards || [];
-    });
-
-    updateCollectionSelect();
-    renderCollections();
-    updateCollectionCount();
-  } catch (err) {
-    console.error('Failed to load collections:', err);
-  }
+  updateCollectionSelect();
+  renderCollections();
+  updateCollectionCount();
 }
 
-// Save collections to localStorage
 function saveCollections() {
-  const dataToSave = Object.entries(collections).map(([title, cards]) => ({ title, cards }));
+  const dataToSave = Object.entries(collections).map(([title, cards]) => ({
+    title,
+    cards
+  }));
+
   localStorage.setItem('cards_collections', JSON.stringify(dataToSave));
   updateCollectionCount();
 }
 
-// Update the collection dropdown
 function updateCollectionSelect() {
   collectionSelect.innerHTML = '<option value="">-- Choisir une collection --</option>';
   for (const name in collections) {
@@ -69,15 +48,14 @@ function updateCollectionSelect() {
   }
 }
 
-// Render all collections
 function renderCollections() {
   collectionsContainer.innerHTML = '';
   for (const [name, cards] of Object.entries(collections)) {
     const div = document.createElement('div');
-    div.className = 'p-4 bg-purple-50 rounded-xl shadow-sm border border-purple-100 hover:shadow-md transition cursor-pointer';
+    div.className = 'p-4 bg-[#3a3a3a] rounded-xl border border-[#4a4a4a] hover:shadow-lg transition cursor-pointer';
     div.innerHTML = `
-      <h4 class="text-lg font-semibold text-purple-700 mb-1">${name}</h4>
-      <p class="text-sm text-gray-600">${cards.length} carte${cards.length > 1 ? 's' : ''}</p>
+      <h4 class="text-lg font-semibold text-[#c49b63] mb-1">${name}</h4>
+      <p class="text-sm text-[#d1d1d1]">${cards.length} carte${cards.length > 1 ? 's' : ''}</p>
     `;
     div.addEventListener('click', () => {
       currentCollection = name;
@@ -87,8 +65,6 @@ function renderCollections() {
     collectionsContainer.appendChild(div);
   }
 }
-
-// Show card
 function showCards(name) {
   const cards = collections[name];
   if (!cards || cards.length === 0) {
@@ -101,10 +77,10 @@ function showCards(name) {
 
   const c = cards[currentIndex];
   cardContainer.innerHTML = `
-    <div class="flip-card w-full cursor-pointer">
+    <div class="flip-card w-full cursor-pointer text-[#1f1f1f]">
       <div class="flip-inner">
-        <div class="flip-front">Question ${currentIndex + 1} : ${c.question}</div>
-        <div class="flip-back">${c.answer}</div>
+        <div class="flip-front bg-[#c49b63] p-6 rounded-xl font-semibold">Question ${currentIndex + 1} : ${c.question}</div>
+        <div class="flip-back bg-[#e0b77c] p-6 rounded-xl font-semibold">${c.answer}</div>
       </div>
     </div>
   `;
@@ -113,7 +89,6 @@ function showCards(name) {
   flipCard.addEventListener('click', () => flipCard.classList.toggle('flipped'));
 }
 
-// Navigation buttons
 document.getElementById('nextCard').addEventListener('click', () => {
   if (!currentCollection) return;
   const cards = collections[currentCollection];
@@ -132,7 +107,6 @@ backButton.addEventListener('click', () => {
   cardSection.classList.add('hidden');
 });
 
-// Create new collection
 collectionForm.addEventListener('submit', e => {
   e.preventDefault();
   const title = collectionTitleInput.value.trim();
@@ -145,38 +119,36 @@ collectionForm.addEventListener('submit', e => {
   saveCollections();
 });
 
-// Add new card
 cardForm.addEventListener('submit', e => {
   e.preventDefault();
   const collectionName = collectionSelect.value;
   const question = document.getElementById('questionInput').value.trim();
   const answer = document.getElementById('answerInput').value.trim();
+
   if (!collectionName) return alert("Veuillez choisir une collection.");
   if (!question || !answer) return alert("Veuillez remplir la question et la réponse.");
+
   collections[collectionName].push({ question, answer });
+
   document.getElementById('questionInput').value = '';
   document.getElementById('answerInput').value = '';
   renderCollections();
   showCards(collectionName);
   saveCollections();
 });
-
-// Clear all collections
-document.getElementById('clearStorageBtn').addEventListener('click', () => {
+clearBtn.addEventListener('click', () => {
   if (confirm("Êtes-vous sûr de vouloir supprimer toutes vos collections ?")) {
-    localStorage.clear();
+    localStorage.removeItem('cards_collections');
     collections = {};
     renderCollections();
     updateCollectionSelect();
     cardSection.classList.add('hidden');
     updateCollectionCount();
-    alert("Toutes les données ont été supprimées");
+    alert("Toutes les données ont été supprimées.");
   }
 });
 
-// Update collection count for homepage
 function updateCollectionCount() {
-  const quizCountEl = document.getElementById('quiz-count');
   if (quizCountEl) {
     quizCountEl.textContent = Object.keys(collections).length;
   }

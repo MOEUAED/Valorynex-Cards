@@ -1,0 +1,54 @@
+{
+  "collections": [
+    {
+      "id": "html-basics",
+      "title": "HTML Basics",
+      "cards": [
+        { "id": "c1", "question": "Quelle balise sert à créer un paragraphe ?", "answer": "<p>" },
+        { "id": "c2", "question": "Quelle balise est utilisée pour un lien ?", "answer": "<a>" },
+        { "id": "c3", "question": "Quelle balise affiche une image ?", "answer": "<img>" },
+        { "id": "c4", "question": "Balise pour un titre principal ?", "answer": "<h1>" }
+      ]
+    },
+    {
+      "id": "css-basics",
+      "title": "CSS Basics",
+      "cards": [
+        { "id": "c5", "question": "Propriété pour la couleur du texte ?", "answer": "color" },
+        { "id": "c6", "question": "Propriété pour la taille du texte ?", "answer": "font-size" },
+        { "id": "c7", "question": "Propriété pour la couleur de fond ?", "answer": "background-color" },
+        { "id": "c8", "question": "Comment centrer un texte ?", "answer": "text-align: center;" }
+      ]
+    },
+    {
+      "id": "javascript-intro",
+      "title": "JavaScript Intro",
+      "cards": [
+        { "id": "c9", "question": "Mot-clé pour déclarer une variable ?", "answer": "let ou const" },
+        { "id": "c10", "question": "Comment afficher un message dans la console ?", "answer": "console.log()" },
+        { "id": "c11", "question": "Type de données pour une valeur vraie/faux ?", "answer": "boolean" },
+        { "id": "c12", "question": "Quelle méthode affiche une alerte ?", "answer": "alert()" }
+      ]
+    },
+    {
+      "id": "git-commands",
+      "title": "Git Commands",
+      "cards": [
+        { "id": "c13", "question": "Commande pour initialiser un dépôt ?", "answer": "git init" },
+        { "id": "c14", "question": "Commande pour vérifier l'état du dépôt ?", "answer": "git status" },
+        { "id": "c15", "question": "Commande pour enregistrer les changements ?", "answer": "git commit -m 'message'" },
+        { "id": "c16", "question": "Commande pour envoyer sur GitHub ?", "answer": "git push" }
+      ]
+    },
+    {
+      "id": "web-concepts",
+      "title": "Web Concepts",
+      "cards": [
+        { "id": "c17", "question": "Que signifie HTTP ?", "answer": "HyperText Transfer Protocol" },
+        { "id": "c18", "question": "Que fait le DNS ?", "answer": "Traduit les noms de domaine en adresses IP" },
+        { "id": "c19", "question": "Différence entre frontend et backend ?", "answer": "Frontend = interface utilisateur, Backend = logique serveur" },
+        { "id": "c20", "question": "Que fait une API ?", "answer": "Elle permet à des applications de communiquer entre elles" }
+      ]
+    }
+  ]
+}

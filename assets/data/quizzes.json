@@ -1,19 +1,157 @@
+[
   {
-    "id": "q1",
+    "id": "quiz-html-1",
     "collectionId": "html-basics",
-    "title": "Quiz HTML - niveau 1",
+    "title": "Quiz HTML - Niveau 1",
     "questions": [
       {
         "id": "q1-1",
         "type": "text",
-        "question": "Que signifie HTML ?",
-        "acceptedAnswers": ["Hyper Text Markup Language", "Hypertext Markup Language"]
+        "question": "Quelle balise sert à créer un lien ?",
+        "acceptedAnswers": ["<a>", "a"]
       },
       {
         "id": "q1-2",
         "type": "true_false",
-        "question": "La balise <div> est sémantique.",
+        "question": "La balise <p> est utilisée pour les titres.",
         "correct": false
+      },
+      {
+        "id": "q1-3",
+        "type": "text",
+        "question": "Quelle balise est utilisée pour une image ?",
+        "acceptedAnswers": ["<img>", "img"]
+      },
+      {
+        "id": "q1-4",
+        "type": "true_false",
+        "question": "La balise <h1> représente un titre principal.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": "quiz-css-1",
+    "collectionId": "css-basics",
+    "title": "Quiz CSS - Niveau 1",
+    "questions": [
+      {
+        "id": "q2-1",
+        "type": "text",
+        "question": "Quelle propriété change la couleur du texte ?",
+        "acceptedAnswers": ["color"]
+      },
+      {
+        "id": "q2-2",
+        "type": "true_false",
+        "question": "La propriété 'font-size' change la couleur du texte.",
+        "correct": false
+      },
+      {
+        "id": "q2-3",
+        "type": "text",
+        "question": "Quelle propriété définit la couleur de fond ?",
+        "acceptedAnswers": ["background-color"]
+      },
+      {
+        "id": "q2-4",
+        "type": "true_false",
+        "question": "text-align: center; centre le texte horizontalement.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": "quiz-js-1",
+    "collectionId": "javascript-intro",
+    "title": "Quiz JavaScript - Introduction",
+    "questions": [
+      {
+        "id": "q3-1",
+        "type": "text",
+        "question": "Quel mot-clé déclare une variable modifiable ?",
+        "acceptedAnswers": ["let"]
+      },
+      {
+        "id": "q3-2",
+        "type": "true_false",
+        "question": "console.log() affiche un message dans la console.",
+        "correct": true
+      },
+      {
+        "id": "q3-3",
+        "type": "text",
+        "question": "Quel type de données représente vrai ou faux ?",
+        "acceptedAnswers": ["boolean"]
+      },
+      {
+        "id": "q3-4",
+        "type": "true_false",
+        "question": "alert() affiche une boîte de dialogue à l'utilisateur.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": "quiz-git-1",
+    "collectionId": "git-commands",
+    "title": "Quiz Git - Commandes de base",
+    "questions": [
+      {
+        "id": "q4-1",
+        "type": "text",
+        "question": "Quelle commande initialise un dépôt Git ?",
+        "acceptedAnswers": ["git init"]
+      },
+      {
+        "id": "q4-2",
+        "type": "true_false",
+        "question": "git status affiche les fichiers modifiés.",
+        "correct": true
+      },
+      {
+        "id": "q4-3",
+        "type": "text",
+        "question": "Quelle commande enregistre les changements avec un message ?",
+        "acceptedAnswers": ["git commit -m", "git commit"]
+      },
+      {
+        "id": "q4-4",
+        "type": "true_false",
+        "question": "git push sert à envoyer le code sur un serveur distant.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": "quiz-web-1",
+    "collectionId": "web-concepts",
+    "title": "Quiz Web Concepts - Généralités",
+    "questions": [
+      {
+        "id": "q5-1",
+        "type": "text",
+        "question": "Que signifie HTTP ?",
+        "acceptedAnswers": ["HyperText Transfer Protocol"]
+      },
+      {
+        "id": "q5-2",
+        "type": "true_false",
+        "question": "Le DNS convertit une adresse IP en nom de domaine.",
+        "correct": false
+      },
+      {
+        "id": "q5-3",
+        "type": "true_false",
+        "question": "Le frontend est la partie visible d’un site web.",
+        "correct": true
+      },
+      {
+        "id": "q5-4",
+        "type": "text",
+        "question": "À quoi sert une API ?",
+        "acceptedAnswers": ["Permet aux applications de communiquer", "Interface de communication entre applications"]
       }
     ]
   }
+]
