@@ -90,19 +90,17 @@
       </div>
     </div>
   </main>
-  <script>
-  const quizCountEl = document.getElementById('quiz-count');
+ <script>
+const quizCountEl = document.getElementById('quiz-count');
 
-  fetch('assets/data/collections.json')
-    .then(response => response.json())
-    .then(data => {
-      quizCountEl.textContent = data.length;
-    })
-    .catch(err => {
-      console.error('Failed to load collections:', err);
-      quizCountEl.textContent = 0;
-    });
+fetch('assets/data/collections.json')
+  .then(response => response.json())
+  .then(data => {
+    const count = data.collections ? data.collections.length : 0;
+    quizCountEl.textContent = count;
+  })
 </script>
+
 
 </body>
 </html>
