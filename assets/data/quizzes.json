@@ -22,7 +22,7 @@
         "question": "Quelle balise est utilisée pour une image ?",
         "acceptedAnswers": ["<img>", "img"]
       },
-      {
+      { 
         "id": "q1-4",
         "type": "true_false",
         "question": "La balise <h1> représente un titre principal.",
